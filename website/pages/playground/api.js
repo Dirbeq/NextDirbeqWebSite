@@ -3,6 +3,7 @@ import Layout from "../../components/layout";
 export default function Api() {
     const callAPI = async () => {
         try {
+            document.getElementById("warNumber").innerHTML = ". . .";
             const res = await fetch(
                 `https://war-service-live.foxholeservices.com/api/worldconquest/war`
             );
