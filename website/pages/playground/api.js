@@ -1,6 +1,6 @@
 import Layout from "../../components/layout";
 
-export default function api() {
+export default function Api() {
     const callAPI = async () => {
         try {
             const res = await fetch(
