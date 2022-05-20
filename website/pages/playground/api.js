@@ -8,6 +8,7 @@ export default function api() {
             );
             const data = await res.json();
             console.log(data);
+            document.getElementById("warNumber").innerHTML = data.warNumber;
         } catch (err) {
             console.log(err);
         }
@@ -17,6 +18,7 @@ export default function api() {
         <div>
             <main>
                 <button onClick={callAPI}>Make API Call</button>
+                <p id="warNumber"></p>
             </main>
         </div></Layout>
     );
