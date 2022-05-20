@@ -3,9 +3,12 @@ import styles from './navbar.module.css';
 
 export default function Navbar({}){
     return(
-        <div className={styles.topnav}>
+        <div className={styles.navbar}>
             <Link href={'/playground/sandbox'}>
-                <a>SandboxLink</a>
+                <a>Sandbox</a>
+            </Link>
+            <Link href={'/playground/api'}>
+                <a>API test</a>
             </Link>
         </div>
     );

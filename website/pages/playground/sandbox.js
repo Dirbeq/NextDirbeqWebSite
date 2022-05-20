@@ -8,11 +8,6 @@ export default function FirstPost() {
             <title>Sandbox</title>
         </Head>
         <h1>Sandbox</h1>
-        <h2>
-            <Link href="/">
-                <a>Back to home</a>
-            </Link>
-        </h2>
     </Layout>
     );
 }

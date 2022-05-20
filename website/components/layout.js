@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Navbar from './navbar';
 
 const name = 'Dirbeq';
-export const siteTitle = 'Dirbeb';
+export const siteTitle = 'Dirweb';
 
 export default function Layout({ children, home }) {
     return (
@@ -18,9 +18,6 @@ export default function Layout({ children, home }) {
                     content="Dirbeq website"
                 />
             </Head>
-            <header className={styles.header}>
-                <h1 className={utilStyles.heading2Xl}>{name}</h1>
-            </header>
             <main>{children}</main>
             {!home && (
                 <div className={styles.backToHome}>
