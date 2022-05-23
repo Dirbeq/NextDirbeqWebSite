@@ -4,7 +4,6 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Navbar from './navbar';
 
-const name = 'Dirbeq';
 export const siteTitle = 'Dirweb';
 
 export default function Layout({ children, home }) {
@@ -15,7 +14,7 @@ export default function Layout({ children, home }) {
                 <link rel="icon" href="/favicon.ico" />
                 <meta
                     name="description"
-                    content="Dirbeq website"
+                    content="Website"
                 />
             </Head>
             <main>{children}</main>

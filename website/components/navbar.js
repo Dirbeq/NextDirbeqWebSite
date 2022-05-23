@@ -8,7 +8,7 @@ export default function Navbar({}){
                 <a>Sandbox</a>
             </Link>
             <Link href={'/'}>
-                <a>^</a>
+                <a>🏠</a>
             </Link>
             <Link href={'/playground/api'}>
                 <a>API test</a>
