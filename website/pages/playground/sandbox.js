@@ -12,7 +12,7 @@ export default function Sandbox() {
         <h1>Zone de test</h1>
         <Link href={'/playground/sandbox'}>
             <a >
-                hrefTest
+                ➕
             </a>
         </Link>
     </Layout>
