@@ -10,10 +10,10 @@ export default function Sandbox() {
             <title>Sandbox</title>
         </Head>
         <h1>Zone de test</h1>
-        <Link href={'/playground/sandbox'}>
-            <a >
-                ➕
-            </a>
+        <Link href={'https://dev.to/webdeasy/top-20-css-buttons-animations-f41'}>
+            <a><button className={styles.button}>
+                button
+            </button></a>
         </Link>
     </Layout>
     );
