@@ -5,14 +5,14 @@ import styles from '../../styles/api.module.css';
 export default function Api() {
     const callAPI = async () => {
         try {
-            document.getElementById("warNumber").innerHTML = ". . .";
+            document.getElementById("ApiResult").innerHTML = ". . .";
             const res = await fetch(
                 `https://war-service-live.foxholeservices.com/api/worldconquest/war`
             );
             const data = await res.json();
             console.log(data);
 
-            document.getElementById("warNumber").innerHTML = JSON.stringify(data);
+            document.getElementById("ApiResult").innerHTML = JSON.stringify(data);
         } catch (err) {
             console.log(err);
         }
@@ -31,7 +31,7 @@ export default function Api() {
                 <title>Api</title>
             </Head>
             <button className={styles.button} onClick={callAPI}>Make API Call</button>
-            <p id="warNumber" className={styles.resultapi}></p>
+            <p id="ApiResult" className={styles.resultapi}></p>
             <button className={styles.button} onClick={clickGitApi}>Free Api</button>
         </Layout>
     );
