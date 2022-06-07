@@ -19,7 +19,7 @@
 .button:disabled {
     background-color: #ffffff;
     color: black;
-    cursor: wait;
+    cursor: not-allowed;
     transition-duration: 4s;
 }
 

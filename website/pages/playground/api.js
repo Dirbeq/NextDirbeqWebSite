@@ -46,11 +46,14 @@ export default function Api() {
                 <p id="ApiResult" className={styles.resultapi}></p>
             </div>
             <button className={styles.button} onClick={clickGitApi}>Free Api</button>
-            <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
-            <script type="IN/Share" data-url="https://www.linkedin.com/company/hexagone-groupe/"></script>
+            <div>
+                <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+                <script type="IN/Share" data-url="https://www.linkedin.com/company/hexagone-groupe/"></script>
 
-            <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
-            <script type="IN/FollowCompany" data-id="10432356" data-counter="bottom"></script>
+                <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                <script type="IN/FollowCompany" data-id="10432356" data-counter="bottom"></script>
+            </div>
+            
         </Layout>
     );
 }
