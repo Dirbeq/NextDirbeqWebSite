@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styles from './layout.module.css';
 import { ReactNode } from 'react';
 
-export const siteTitle = 'Dirweb';
+export const siteTitle = 'DirWeb';
 
 interface Props {
     children?: ReactNode;
