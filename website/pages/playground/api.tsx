@@ -5,15 +5,16 @@ import styles from "../../styles/api.module.css";
 export default function Api() {
     const callAPI = async () => {
         try {
-            document.getElementById("ApiWarButton").disabled = true;
+            const btn = document.getElementById("ApiWarButton") as HTMLButtonElement | null;
+            btn!.disabled = true;
 
             setTimeout(function () {
-                document.getElementById("ApiWarButton").disabled = false;
+                btn!.disabled = false;
             }, 3000);
 
-            document.getElementById("ApiResult").innerHTML = ". . .";
-            document.getElementById("PWarNumber").innerHTML = ". . .";
-            document.getElementById("StartTime").innerHTML = ". . .";
+            document.getElementById("ApiResult")!.innerHTML = ". . .";
+            document.getElementById("PWarNumber")!.innerHTML = ". . .";
+            document.getElementById("StartTime")!.innerHTML = ". . .";
 
             const res = await fetch(
                 `https://war-service-live.foxholeservices.com/api/worldconquest/war`
@@ -21,11 +22,11 @@ export default function Api() {
             const data = await res.json();
             const date = new Date(data["conquestStartTime"]);
 
-            document.getElementById("PWarNumber").innerHTML =
+            document.getElementById("PWarNumber")!.innerHTML =
                 "War number : " + data["warNumber"];
-            document.getElementById("StartTime").innerHTML =
+            document.getElementById("StartTime")!.innerHTML =
                 "Start time : " + date.toLocaleString();
-            document.getElementById("ApiResult").innerHTML = JSON.stringify(data);
+            document.getElementById("ApiResult")!.innerHTML = JSON.stringify(data);
         } catch (err) {
             console.log(err);
         }
@@ -33,9 +34,7 @@ export default function Api() {
 
     const clickGitApi = () => {
         try {
-            window
-                .open("https://github.com/public-apis/public-apis", "_blank")
-                .focus();
+            window.open("https://github.com/public-apis/public-apis", "_blank")!.focus();
         } catch (error) {
             console.log(error);
         }

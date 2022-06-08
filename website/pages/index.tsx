@@ -5,15 +5,14 @@ import utilStyles from '../styles/utils.module.css';
 export default function Home() {
   function OpenGit() {
     try {
-      window.open("https://github.com/Dirbeq/website", "_blank")
-        .focus();
+      window.open("https://github.com/Dirbeq/website", "_blank")!.focus();
     } catch (error) {
       console.log(error);
     }
   }
 
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
       </Head>

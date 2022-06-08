@@ -1,12 +1,14 @@
 import Head from 'next/head';
 import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
-import Navbar from './navbar';
+import { ReactNode } from 'react';
 
 export const siteTitle = 'Dirweb';
 
-export default function Layout({ children, home }) {
+interface Props {
+    children?: ReactNode;
+}
+
+export default function Layout({ children }: Props) {
     return (
         
         <div className={styles.container}>
