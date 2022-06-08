@@ -23,16 +23,20 @@
     transition-duration: 4s;
 }
 
-.resultapi{
+.resultApi{
     font-size: small;
     width: fit-content;
 }
 
 .WarApiDiv{
     width: fit-content;
-    margin: auto;
     padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: #ffffff;
+}
+
+.box{
+    width: fit-content;
+    padding: 10px;
+    border: 1px solid black;
 }

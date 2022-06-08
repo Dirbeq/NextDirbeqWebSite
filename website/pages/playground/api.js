@@ -6,6 +6,7 @@ export default function Api() {
     const callAPI = async () => {
         try {
             document.getElementById("ApiWarButton").disabled = true;
+
             setTimeout(function () { document.getElementById("ApiWarButton").disabled = false; }, 3000);
 
             document.getElementById("ApiResult").innerHTML = ". . .";
@@ -43,17 +44,16 @@ export default function Api() {
             <div id="WarApiDiv" className={styles.WarApiDiv} >
                 <p id="PWarNumber"></p>
                 <p id="StartTime"></p>
-                <p id="ApiResult" className={styles.resultapi}></p>
+                <p id="ApiResult" className={styles.resultApi}></p>
             </div>
-            <button className={styles.button} onClick={clickGitApi}>Free Api</button>
-            <div>
-                <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+            <button className={styles.button} onClick={clickGitApi}>Free Api 📎</button>
+            <div className={styles.box}>
+                <script src="https://platform.linkedin.com/in.js"> lang: fr_FR</script>
                 <script type="IN/Share" data-url="https://www.linkedin.com/company/hexagone-groupe/"></script>
 
-                <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                <script src="https://platform.linkedin.com/in.js"> lang: fr_FR</script>
                 <script type="IN/FollowCompany" data-id="10432356" data-counter="bottom"></script>
             </div>
-            
         </Layout>
     );
 }
