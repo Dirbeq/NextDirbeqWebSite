@@ -16,7 +16,7 @@ export default function Sandbox() {
             document.body.style.backgroundColor = 'white';
             document.body.style.color = 'black';
         }}>Make background white</button>
-        <p>text</p>
+        <p>text test</p>
     </Layout>
     );
 }

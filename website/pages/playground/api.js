@@ -1,13 +1,15 @@
 import Head from "next/head";
 import Layout from "../../components/layout";
-import styles from '../../styles/api.module.css';
+import styles from "../../styles/api.module.css";
 
 export default function Api() {
     const callAPI = async () => {
         try {
             document.getElementById("ApiWarButton").disabled = true;
 
-            setTimeout(function () { document.getElementById("ApiWarButton").disabled = false; }, 3000);
+            setTimeout(function () {
+                document.getElementById("ApiWarButton").disabled = false;
+            }, 3000);
 
             document.getElementById("ApiResult").innerHTML = ". . .";
             document.getElementById("PWarNumber").innerHTML = ". . .";
@@ -19,10 +21,11 @@ export default function Api() {
             const data = await res.json();
             const date = new Date(data["conquestStartTime"]);
 
-            document.getElementById("PWarNumber").innerHTML = "War number : " + data["warNumber"];
-            document.getElementById("StartTime").innerHTML = "Start time : " + date.toLocaleString();
+            document.getElementById("PWarNumber").innerHTML =
+                "War number : " + data["warNumber"];
+            document.getElementById("StartTime").innerHTML =
+                "Start time : " + date.toLocaleString();
             document.getElementById("ApiResult").innerHTML = JSON.stringify(data);
-
         } catch (err) {
             console.log(err);
         }
@@ -30,29 +33,42 @@ export default function Api() {
 
     const clickGitApi = () => {
         try {
-            window.open("https://github.com/public-apis/public-apis", '_blank').focus();
+            window
+                .open("https://github.com/public-apis/public-apis", "_blank")
+                .focus();
         } catch (error) {
             console.log(error);
         }
-    }
+    };
     return (
         <Layout>
             <Head>
                 <title>Api</title>
             </Head>
-            <button id="ApiWarButton" className={styles.button} onClick={callAPI}>Make API Call</button>
-            <div id="WarApiDiv" className={styles.WarApiDiv} >
+            <button id="ApiWarButton" className={styles.button} onClick={callAPI}>
+                Make API Call
+            </button>
+            <div id="WarApiDiv" className={styles.WarApiDiv}>
                 <p id="PWarNumber"></p>
                 <p id="StartTime"></p>
                 <p id="ApiResult" className={styles.resultApi}></p>
             </div>
-            <button className={styles.button} onClick={clickGitApi}>Free Api 📎</button>
+            <button className={styles.button} onClick={clickGitApi}>
+                Free Api 📎
+            </button>
             <div className={styles.box}>
-                <script src="https://platform.linkedin.com/in.js"> lang: fr_FR</script>
-                <script type="IN/Share" data-url="https://www.linkedin.com/company/hexagone-groupe/"></script>
+                <script src="https://platform.linkedin.com/in.js"></script>
+                <script
+                    type="IN/Share"
+                    data-url="https://www.linkedin.com/company/hexagone-groupe/"
+                ></script>
 
-                <script src="https://platform.linkedin.com/in.js"> lang: fr_FR</script>
-                <script type="IN/FollowCompany" data-id="10432356" data-counter="bottom"></script>
+                <script src="https://platform.linkedin.com/in.js"></script>
+                <script
+                    type="IN/FollowCompany"
+                    data-id="10432356"
+                    data-counter="bottom"
+                ></script>
             </div>
         </Layout>
     );
