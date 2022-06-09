@@ -10,7 +10,7 @@ export default function Sandbox() {
             <title>Sandbox</title>
         </Head>
         <button className={styles.button} onClick={() => {
-            document.body.style.backgroundColor = "#1a1a1a";
+            document.body.style.backgroundColor = "gray";
             document.body.style.color = "#fff";
             Dookie.set("DarkMode", "true", 1);
             Dookie.set("cookies?", "true", 1);
