@@ -51,3 +51,8 @@
     color: #666;
 }
 
+.box{
+    width: fit-content;
+    padding: 10px;
+    border: 1px solid black;
+}

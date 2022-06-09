@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Layout from "../../components/layout";
 import styles from "../../styles/api.module.css";
+import utilStyles from "../../styles/utils.module.css";
 
 export default function Api() {
     const callAPI = async () => {
@@ -55,20 +56,6 @@ export default function Api() {
             <button className={styles.button} onClick={clickGitApi}>
                 Free Api 📎
             </button>
-            <div className={styles.box}>
-                <script src="https://platform.linkedin.com/in.js"></script>
-                <script
-                    type="IN/Share"
-                    data-url="https://www.linkedin.com/company/hexagone-groupe/"
-                ></script>
-
-                <script src="https://platform.linkedin.com/in.js"></script>
-                <script
-                    type="IN/FollowCompany"
-                    data-id="10432356"
-                    data-counter="bottom"
-                ></script>
-            </div>
         </Layout>
     );
 }

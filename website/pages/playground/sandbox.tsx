@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Layout from '../../components/layout';
 import styles from '../../styles/sandbox.module.css'
-
+import utilStyles from '../../styles/utils.module.css'
+import { Dookie } from '../../components/dookie';
 
 export default function Sandbox() {
     return (<Layout>
@@ -9,13 +10,40 @@ export default function Sandbox() {
             <title>Sandbox</title>
         </Head>
         <button className={styles.button} onClick={() => {
-            document.body.style.backgroundColor = 'gray';
-            document.body.style.color = 'white';
-        }}>Make background gray</button>
+            document.body.style.backgroundColor = "#1a1a1a";
+            document.body.style.color = "#fff";
+            Dookie.set("DarkMode", "true", 1);
+            Dookie.set("cookies?", "true", 1);
+        }}>🌑</button>
+        <button className={styles.button} onClick={() => {
+            console.log(Dookie.getAll());
+        }
+        }>get all cookie</button>
+        <button className={styles.button} onClick={() => {
+            console.log(Dookie.deleteAll());
+        }
+        }>delete cookie</button>
         <button className={styles.button} onClick={() => {
             document.body.style.backgroundColor = 'white';
             document.body.style.color = 'black';
-        }}>Make background white</button>
+            Dookie.set("DarkMode", "false", 1);
+        }}>☀</button>
+
+        <div><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:6939540169867853824" height="726" width="504" title="Post intégré"></iframe></div>
+        <div className={utilStyles.box}>
+                <script src="https://platform.linkedin.com/in.js"></script>
+                <script
+                    type="IN/Share"
+                    data-url="https://www.linkedin.com/company/hexagone-groupe/"
+                ></script>
+
+                <script src="https://platform.linkedin.com/in.js"></script>
+                <script
+                    type="IN/FollowCompany"
+                    data-id="10432356"
+                    data-counter="bottom"
+                ></script>
+            </div>
     </Layout>
     );
 }

@@ -10,7 +10,6 @@ export default function Home() {
       console.log(error);
     }
   }
-
   return (
     <Layout>
       <Head>
