@@ -1,3 +1,7 @@
+.menu {
+    display: none;
+}
+
 /* Style the navigation menu */
 .navbar {
     background-color: rgb(94, 200, 207);
@@ -5,7 +9,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-    align-self: center
+    align-self: center;
+    border-radius: 0px 0px 100px 100px;
 }
 
 /* Navigation links */
@@ -25,6 +30,7 @@
     .navbar {
         position: relative;
     }
+
     .navbar a {
         float: none;
         display: block;
@@ -35,7 +41,7 @@
 
 /* Add a background color on mouse-over */
 .navbar a:hover {
-    background: linear-gradient(124deg, rgb(94, 200, 207), rgb(94, 200, 207),#2b1de8, #dd00f3, #dd00f3,#ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840 );
+    background: linear-gradient(124deg, rgb(94, 200, 207), rgb(94, 200, 207), #2b1de8, #dd00f3, #dd00f3, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840);
     background-size: 1800% 1800%;
 
     -webkit-animation: rainbow 18s ease infinite;

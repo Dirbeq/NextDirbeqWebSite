@@ -10,7 +10,7 @@ export default function Menu({}){
     }
     
     return(
-        <div className={styles.navbar} onClick={StopAllTimeouts} >
+        <><div className={styles.navbar} onClick={StopAllTimeouts}>
             <Link href={'/playground/sandbox'}>
                 <a>Sandbox</a>
             </Link>
@@ -21,5 +21,8 @@ export default function Menu({}){
                 <a>API test</a>
             </Link>
         </div>
+        <div className={styles.menu}>
+            Menu
+        </div></>
     );
 }
