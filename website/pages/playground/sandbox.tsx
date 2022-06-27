@@ -6,9 +6,11 @@ import { Dookie } from '../../components/dookie';
 
 export default function Sandbox() {
     return (<Layout>
+        
         <Head>
             <title>Sandbox</title>
         </Head>
+
         <button className={styles.button} onClick={() => {
             document.body.style.backgroundColor = "gray";
             document.body.style.color = "#fff";
@@ -36,7 +38,6 @@ export default function Sandbox() {
                     type="IN/Share"
                     data-url="https://www.linkedin.com/company/hexagone-groupe/"
                 ></script>
-
                 <script src="https://platform.linkedin.com/in.js"></script>
                 <script
                     type="IN/FollowCompany"

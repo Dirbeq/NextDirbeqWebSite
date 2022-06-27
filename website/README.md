@@ -1,1 +1,4 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# Site web perso 
+
+Objectif : Site de test
+Technologie: Next.js, TypeScript
