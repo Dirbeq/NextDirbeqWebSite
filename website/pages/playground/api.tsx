@@ -9,24 +9,18 @@ export default function Api() {
             const btn = document.getElementById("ApiWarButton") as HTMLButtonElement | null;
             btn!.disabled = true;
 
-            setTimeout(function () {
-                btn!.disabled = false;
-            }, 3000);
+            setTimeout(function () { btn!.disabled = false; }, 3000);
 
             document.getElementById("ApiResult")!.innerHTML = ". . .";
             document.getElementById("PWarNumber")!.innerHTML = ". . .";
             document.getElementById("StartTime")!.innerHTML = ". . .";
 
-            const res = await fetch(
-                `https://war-service-live.foxholeservices.com/api/worldconquest/war`
-            );
+            const res = await fetch(`https://war-service-live.foxholeservices.com/api/worldconquest/war`);
             const data = await res.json();
             const date = new Date(data["conquestStartTime"]);
 
-            document.getElementById("PWarNumber")!.innerHTML =
-                "War number : " + data["warNumber"];
-            document.getElementById("StartTime")!.innerHTML =
-                "Start time : " + date.toLocaleString();
+            document.getElementById("PWarNumber")!.innerHTML = "War number : " + data["warNumber"];
+            document.getElementById("StartTime")!.innerHTML = "Start time : " + date.toLocaleString();
             document.getElementById("ApiResult")!.innerHTML = JSON.stringify(data);
         } catch (err) {
             console.log(err);
