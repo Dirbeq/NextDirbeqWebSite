@@ -1,7 +1,7 @@
 import Link from "next/link";
-import styles from './navbar.module.css';
+import styles from './menu.module.css';
 
-export default function Navbar({}){
+export default function Menu({}){
     function StopAllTimeouts() {
         var id = window.setTimeout(function() {}, 0);
         while (id--) {

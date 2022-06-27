@@ -1,5 +1,5 @@
 import '../styles/global.css';
-import Navbar from '../components/navbar';
+import Menu from '../components/menu';
 import { Dookie } from '../components/dookie';
 import { useEffect } from 'react';
 
@@ -12,9 +12,10 @@ export default function App({ Component, pageProps }: Props) {
     useEffect(() => {
         if (Dookie.get("DarkMode") == "true") {
             document.body.style.backgroundColor = "gray";
+            document.body.style.color = "white";
         }
     }, []);
     return (
-        <><Navbar /><Component {...pageProps} /></>
+        <><Menu /><Component {...pageProps} /></>
     );
 }
