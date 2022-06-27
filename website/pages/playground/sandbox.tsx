@@ -3,6 +3,7 @@ import Layout from '../../components/layout';
 import styles from '../../styles/sandbox.module.css'
 import utilStyles from '../../styles/utils.module.css'
 import { Dookie } from '../../components/dookie';
+import { Notif } from '../../components/notif';
 
 export default function Sandbox() {
     return (<Layout>
@@ -10,7 +11,7 @@ export default function Sandbox() {
         <Head>
             <title>Sandbox</title>
         </Head>
-
+        <div>
         <button className={styles.button} onClick={() => {
             document.body.style.backgroundColor = "gray";
             document.body.style.color = "#fff";
@@ -29,7 +30,15 @@ export default function Sandbox() {
             document.body.style.backgroundColor = 'white';
             document.body.style.color = 'black';
             Dookie.set("DarkMode", "false", 1);
-        }}>☀</button>
+        }}>☀</button></div>
+        <div>
+            <button className={styles.button} onClick={() => {
+                Notif.check();
+            }}>check notif</button>
+            <button className={styles.button} onClick={() => {
+                Notif.sendNotif("title", "body", "","");
+            }}>send notif</button>
+        </div>
 
         <div><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:6939540169867853824" height="726" width="504" title="Post intégré"></iframe></div>
         <div className={utilStyles.box}>
