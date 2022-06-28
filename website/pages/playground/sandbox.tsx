@@ -6,6 +6,7 @@ import { Dookie } from '../../components/dookie';
 import { Notif } from '../../components/notif';
 
 export default function Sandbox() {
+
     return (<Layout>
         <Head>
             <title>Sandbox</title>

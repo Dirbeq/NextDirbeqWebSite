@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Layout from "../../components/layout";
 import styles from "../../styles/api.module.css";
-import utilStyles from "../../styles/utils.module.css";
 
 export default function Api() {
     const callAPI = async () => {
