@@ -3,12 +3,19 @@ export const Notif = {
         if (Notification.permission !== "granted") {
             Notification.requestPermission();
         }
-            return console.log(Notification.permission);
+        return console.log(Notification.permission);
     },
-    sendNotif: function (title: string, body : string, icon : string, link : string) {
+    sendNotif: function (title: string, body: string, icon: string, link: string) {
+        Notif.check();
         const notification = new Notification(title, {
             body,
             icon
         })
-    return null}
+        if (link) {
+            notification.onclick = function () {
+                window.open(link);
+            }
+        }
+        return null
+    }
 }
