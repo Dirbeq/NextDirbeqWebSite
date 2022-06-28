@@ -1,11 +1,11 @@
 export const Dookie = {
-    set: function (name: string, value: string, days: number) {
+    set: function (name: string, value: string, days: number) { // create a new cookie 
         const expires = new Date();
         expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
         document.cookie = name + "=" + value + ";expires=" + expires.toUTCString();
     },
 
-    get: function (name: string) {
+    get: function (name: string) { // get cookie by name
         const nameEQ = name + "=";
         const ca = document.cookie.split(";");
         for (let i = 0; i < ca.length; i++) {
@@ -16,7 +16,7 @@ export const Dookie = {
         return null;
     },
 
-    getAll: function () {
+    getAll: function () { // get all cookies
         const cookies = document.cookie.split(";");
         const cookiesList = cookies.map((cookie) => {
             const [name, value] = cookie.split("=");
@@ -25,12 +25,12 @@ export const Dookie = {
         return cookiesList;
     },
 
-    delete : function(name: string) {
+    delete : function(name: string) { // delete cookie by name
         document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
         return true;
     },
 
-    deleteAll : function() {
+    deleteAll : function() { // delete all cookies
         const cookies = document.cookie.split(";");
         cookies.forEach((cookie) => {
             const [name] = cookie.split("=");

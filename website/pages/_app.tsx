@@ -10,7 +10,7 @@ interface Props {
 
 export default function App({ Component, pageProps }: Props) {
     useEffect(() => {
-        if (Dookie.get("DarkMode") == "true") {
+        if (Dookie.get("darkMode") == "true") {
             document.body.style.backgroundColor = "gray";
             document.body.style.color = "white";
         }
