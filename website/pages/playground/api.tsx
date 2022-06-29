@@ -26,7 +26,25 @@ export default function Api() {
         }
     };
 
-    const clickGitApi = () => {
+    const callMyAPI = async () => {
+            const btn = document.getElementById("NextApiBtn") as HTMLButtonElement | null;
+            btn!.disabled = true;
+
+            setTimeout(function () { btn!.disabled = false; }, 3000);
+
+            document.getElementById("NextApiResult")!.innerHTML = ". . .";
+
+            const res = await fetch(`http://localhost:3000/api/test`);
+            const data = await res.json();
+
+            document.getElementById("NextApiResult")!.innerHTML = JSON.stringify(data);
+        try {
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+    const clickGitApi = async () => {
         try {
             window.open("https://github.com/public-apis/public-apis", "_blank")!.focus();
         } catch (error) {
@@ -38,13 +56,19 @@ export default function Api() {
             <Head>
                 <title>Api</title>
             </Head>
-            <button id="ApiWarButton" className={styles.button} onClick={callAPI}>
-                Make API Call
-            </button>
             <div id="WarApiDiv" className={styles.WarApiDiv}>
+                <button id="ApiWarButton" className={styles.button} onClick={callAPI}>
+                    Make API Call
+                </button>
                 <p id="PWarNumber"></p>
                 <p id="StartTime"></p>
                 <p id="ApiResult" className={styles.resultApi}></p>
+            </div>
+            <div className={styles.WarApiDiv}>
+                <button id="NextApiBtn" className={styles.button} onClick={callMyAPI}>
+                    Test Nextjs api call
+                </button>
+                <span id="NextApiResult" className={styles.resultApi} ></span>
             </div>
             <button className={styles.button} onClick={clickGitApi}>
                 Free Api 📎

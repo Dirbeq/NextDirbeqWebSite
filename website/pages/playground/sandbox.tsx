@@ -36,7 +36,7 @@ export default function Sandbox() {
                 Notif.sendNotif("title", "body", "../favicon.ico", "");
             }}>send notification</button>
         </div>
-        <div><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:6939540169867853824" height="726" width="504" title="Post intégré"></iframe></div>
+        <div><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6943497623853002752" height="726" width="504" title="Post intégré"></iframe></div>
         <div className={utilStyles.box}>
             <script src="https://platform.linkedin.com/in.js"></script>
             <script
