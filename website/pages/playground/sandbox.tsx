@@ -16,7 +16,6 @@ export default function Sandbox() {
                 document.body.style.backgroundColor = "gray";
                 document.body.style.color = "#fff";
                 Dookie.set("darkMode", "true", 1);
-                Dookie.set("cookies?", "true", 1);
             }}>🌑</button>
             <button className={styles.button} onClick={() => {
                 console.log(Dookie.getAll());
@@ -36,7 +35,7 @@ export default function Sandbox() {
                 Notif.sendNotif("title", "body", "../favicon.ico", "");
             }}>send notification</button>
         </div>
-        <div><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6943497623853002752" height="726" width="504" title="Post intégré"></iframe></div>
+        <div><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:all" height="726" width="504" title="Post intégré"></iframe></div>
         <div className={utilStyles.box}>
             <script src="https://platform.linkedin.com/in.js"></script>
             <script

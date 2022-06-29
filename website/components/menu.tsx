@@ -20,6 +20,9 @@ export default function Menu({}){
             <Link href={'/playground/api'}>
                 <a>API test</a>
             </Link>
+        </div>
+        <div>
+            <p className={styles.paramMenu}>Parameters</p>
         </div></>
     );
 }
