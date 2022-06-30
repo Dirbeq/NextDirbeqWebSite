@@ -24,7 +24,7 @@ export default function Menu({}){
                 <a>Sandbox</a>
             </Link>
             <Link href={'/playground/api'}>
-                <a>API test</a>
+                <a>API</a>
             </Link>
             <a id="closeMenuButton" className={styles.closeMenu} onClick={closeMenu}>X</a>
         </div>

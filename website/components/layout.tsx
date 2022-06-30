@@ -15,8 +15,8 @@ export default function Layout({ children }: Props) {
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <meta
-                    name="description"
-                    content="Website"
+                    name="icon"
+                    content="Website icon"
                 />
             </Head>
             <main>{children}</main>
