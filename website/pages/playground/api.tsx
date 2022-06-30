@@ -3,7 +3,7 @@ import Layout from "../../components/layout";
 import styles from "../../styles/api.module.css";
 
 export default function Api() {
-    const callAPI = async () => {
+    const callAPI = async () => { //Call a external API 
         try {
             const btn = document.getElementById("ApiWarButton") as HTMLButtonElement | null;
             btn!.disabled = true;
@@ -26,7 +26,7 @@ export default function Api() {
         }
     };
 
-    const callMyAPI = async () => {
+    const callMyAPI = async () => { //Call a API stored in next/api
             const btn = document.getElementById("NextApiBtn") as HTMLButtonElement | null;
             btn!.disabled = true;
 
@@ -44,7 +44,7 @@ export default function Api() {
         }
     };
 
-    const clickGitApi = async () => {
+    const clickGitApi = async () => { //Open a github page
         try {
             window.open("https://github.com/public-apis/public-apis", "_blank")!.focus();
         } catch (error) {

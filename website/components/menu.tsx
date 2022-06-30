@@ -8,9 +8,15 @@ export default function Menu({}){
             window.clearTimeout(id);
         }
     }
-    
+    function openMenu() {
+        document.getElementById("menu")!.style.width = "250px";
+        
+    }
+    function closeMenu() {
+        document.getElementById("menu")!.style.width = "0";
+    }
     return(
-        <><div className={styles.navbar} onClick={StopAllTimeouts}>
+        <><div id="menu" className={styles.navbar} onClick={StopAllTimeouts}>
             <Link href={'/playground/sandbox'}>
                 <a>Sandbox</a>
             </Link>
@@ -20,9 +26,11 @@ export default function Menu({}){
             <Link href={'/playground/api'}>
                 <a>API test</a>
             </Link>
+            <a id="closeMenuButton" className={styles.closeMenu} onClick={closeMenu}>X</a>
         </div>
-        <div>
-            <p className={styles.paramMenu}>Parameters</p>
-        </div></>
+        <div id="menuButton" className={styles.openMenu} onClick={openMenu}>
+            Menu
+        </div>
+        </>
     );
 }
