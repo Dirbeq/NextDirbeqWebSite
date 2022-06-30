@@ -28,7 +28,7 @@ export default function Sandbox() {
             <button className={styles.button} onClick={() => {
                 document.body.style.backgroundColor = 'white';
                 document.body.style.color = 'black';
-                Dookie.set("DarkMode", "false", 1);
+                Dookie.set("darkMode", "false", 1);
             }}>☀</button></div>
         <div className={utilStyles.box}>
             <button className={styles.button} onClick={() => {

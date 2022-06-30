@@ -17,20 +17,18 @@ export default function Menu({}){
     }
     return(
         <><div id="menu" className={styles.navbar} onClick={StopAllTimeouts}>
-            <Link href={'/playground/sandbox'}>
-                <a>Sandbox</a>
-            </Link>
             <Link href={'/'}>
                 <a>🏠</a>
+            </Link>
+            <Link href={'/playground/sandbox'}>
+                <a>Sandbox</a>
             </Link>
             <Link href={'/playground/api'}>
                 <a>API test</a>
             </Link>
             <a id="closeMenuButton" className={styles.closeMenu} onClick={closeMenu}>X</a>
         </div>
-        <div id="menuButton" className={styles.openMenu} onClick={openMenu}>
-            Menu
-        </div>
+        <div id="menuButton" className={styles.openMenu} onClick={openMenu}></div>
         </>
     );
 }
