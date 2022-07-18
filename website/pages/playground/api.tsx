@@ -30,7 +30,7 @@ export default function Api() {
             const btn = document.getElementById("NextApiBtn") as HTMLButtonElement | null;
             btn!.disabled = true;
 
-            setTimeout(function () { btn!.disabled = false; }, 3000);
+            setTimeout(function () { btn!.disabled = false; }, 1000);
 
             document.getElementById("NextApiResult")!.innerHTML = ". . .";
 
@@ -46,7 +46,7 @@ export default function Api() {
 
     const clickGitApi = async () => { //Open a github page
         try {
-            window.open("https://github.com/public-apis/public-apis", "_blank")!.focus();
+            window.open("https://apislist.com/", "_blank")!.focus();
         } catch (error) {
             console.log(error);
         }
